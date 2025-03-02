@@ -5,17 +5,32 @@ import cart from "./images/icon-cart.svg";
 import "./App.css";
 
 export default function App() {
+  let [isDesktop, setIsDesktop] = useState(false);
+
+  function toggleIsDesktop() {
+    if (window.innerWidth >= 768) {
+      return setIsDesktop(currentState => !currentState);
+    } else {
+      return isDesktop;
+    }
+  }
+  
   return (
     <div className="device">
       <div className="app">
         <div className="product-image-container">
           <img
             className="product-image"
+            src={isDesktop ? productDesktop : productMobile}
+            alt="perfum product photo"
+          />
+          {/* <img
+            className="product-image"
             src={productMobile}
             srcSet={`${productMobile} 375w, ${productDesktop} 768w`}
             sizes="(max-width: 375px) 375px, (max-width: 768px) 768px"
             alt="perfum product photo"
-          />
+          /> */}
         </div>
         <main className="main">
           <p className="category">Perfume</p>
