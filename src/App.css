@@ -1,2 +1,157 @@
-main {
+/* Colors 
+black: 1c232b
+grey: 6c7289
+cream: f2eae2
+white: fff
+green500: 3d8168
+green700: 1a4032
+*/
+
+/* Fonts
+Fraunces
+Montserrat
+*/
+
+*, 
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* layout */
+.device {
+  background: #f2eae2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+.app {
+  background: #fff;
+  width: 350px;
+  height: 750px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.product-image {
+  display: block;
+  width: 100%; 
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.main * {
+  margin: 0;
+}
+
+.main {
+  padding: 2em;
+  min-height: 408px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.category, 
+.description, 
+.original-price {
+  color: #6c7289;
+}
+
+.category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: 'Fraunces', serif;
+  color: #1c232b;
+}
+
+.description {
+  line-height: 1.6;
+  font-size: 0.875rem;
+}
+
+.price-container {
+  width: 191px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+p.price {
+  font-size: 2rem;
+  color: #3d8168;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+p.original-price {
+  text-decoration: line-through;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  margin: 0;
+}
+
+.cta-btn {
+  display: block;
+  width: 100%;
+  background: #3d8168;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  font-size: 0.875rem;
+  gap: 8px;
+  font-weight: 700;
+  padding: min(16px, 1rem);
+  border-radius: 8px;
+}
+
+/* media query */
+@media (min-width: 768px) {
+  .app {
+    width: 600px;
+    height: 456px;
+    display: flex
+  }
+
+  .product-image-container, 
+  .main {
+    width: 50%;
+  }
+
+  .product-image {
+    height: 100%;
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: unset;
+  }
+  
+  .main {
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-btn:hover, 
+  .cta-btn:focus {
+    background: #1a4032;
+  }
+
+  .cta-btn:active {
+    opacity: 0.6;
+  }
 }
