@@ -13,8 +13,8 @@ export default function App() {
             className="product-image"
             src={productMobile}
             srcSet={`${productMobile} 375w, ${productDesktop} 768w`}
-            sizes="(max-width: 767px) 375px, 768px"
-            alt="perfume product photo"
+            sizes="(max-width: 375px) 375px, (max-width: 768px) 768px"
+            alt="perfum product photo"
           />
         </div>
         <main className="main">
